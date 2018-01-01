@@ -1,4 +1,4 @@
-function [ highest ] = rankH( P,sizesOfP,h )
+function [ highest ] = rankH( P,sizesOfP,h,currentFriends,noCur )
 counts = zeros(63731,1);%There are 63731 vertices 1 to 63731 we will look who has in P more
 [k,~,~]=size(P);
 for i=1:k
@@ -8,7 +8,7 @@ for i=1:k
         end
     end
 end
-
+counts(currentFriends(1:noCur))=0;%This will exclude already added friends
 [~,sorted] = sort(counts,'descend');
 highest = sorted(1:h);% Get max ranked h elements and return.
 
