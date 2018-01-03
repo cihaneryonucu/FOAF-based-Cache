@@ -1,5 +1,4 @@
-close all
-clear all
+function [ userIDs] = linkGenerator()
 %UserIDs are stored in variable "userIDs", new generated txt file is "merger.txt"
 
 userIDs = randi([1 63698], 1, 20);

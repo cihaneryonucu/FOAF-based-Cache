@@ -1,11 +1,11 @@
 function [ adjList,sizes ] = readGraph()
 
-in=fopen('input.txt','r');
+in=fopen('merger.txt','r');
 data=textscan(in,'%d %d %d %d');
 %fgetl(in) '1 2 1 0'
 adjList = zeros(63731,1098);
 sizes = zeros(63731,1);
-for i=1:817035
+for i=1:817103
    fromNode=data{1}(i);
    toNode = data{2}(i);
    
