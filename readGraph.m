@@ -5,7 +5,7 @@ data=textscan(in,'%d %d %d %d');
 %fgetl(in) '1 2 1 0'
 adjList = zeros(63731,1098);
 sizes = zeros(63731,1);
-for i=1:817103
+for i=1:817108
    fromNode=data{1}(i);
    toNode = data{2}(i);
    

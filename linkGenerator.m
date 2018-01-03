@@ -1,21 +1,42 @@
 function [ userIDs] = linkGenerator()
 %UserIDs are stored in variable "userIDs", new generated txt file is "merger.txt"
 
-userIDs = randi([1 63698], 1, 20);
+% userIDs = randi([1 63698], 1, 20);
+% userIDs = sort(userIDs,'ascend');
+% linkM = zeros(20);
+% linkM(1,:) = [0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 0 1 0];
+% linkM(2,:) = [0 0 1 0 0 1 1 1 1 0 1 1 1 1 1 1 1 0 1 1];
+% linkM(3,:) = [0 0 0 1 1 0 1 1 1 1 1 1 1 1 1 1 0 0 0 0];
+% linkM(4,:) = [0 0 0 0 0 1 1 0 1 1 0 1 1 0 1 0 1 0 1 1];
+% linkM(5,:) = [0 0 0 0 0 0 1 0 0 1 1 1 0 1 1 0 1 0 0 0];
+% linkM(6,:) = [0 0 0 0 0 0 1 0 1 0 1 0 0 1 1 0 0 0 0 0];
+% linkM(7,8)  = 1;
+% linkM(8,9)  = 1;
+% linkM(8,16) = 1;
+% linkM(10,18)= 1;
+% linkM(13,18)= 1;
+% linkM(17,18)= 1;
+
+userIDs = randi([1 63698], 1, 25);
 userIDs = sort(userIDs,'ascend');
-linkM = zeros(20);
-linkM(1,:) = [0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 0 1 0];
-linkM(2,:) = [0 0 1 0 0 1 1 1 1 0 1 1 1 1 1 1 1 0 1 1];
-linkM(3,:) = [0 0 0 1 1 0 1 1 1 1 1 1 1 1 1 1 0 0 0 0];
-linkM(4,:) = [0 0 0 0 0 1 1 0 1 1 0 1 1 0 1 0 1 0 1 1];
-linkM(5,:) = [0 0 0 0 0 0 1 0 0 1 1 1 0 1 1 0 1 0 0 0];
-linkM(6,:) = [0 0 0 0 0 0 1 0 1 0 1 0 0 1 1 0 0 0 0 0];
-linkM(7,8)  = 1;
-linkM(8,9)  = 1;
-linkM(8,16) = 1;
-linkM(10,18)= 1;
-linkM(13,18)= 1;
-linkM(17,18)= 1;
+linkM = zeros(25);
+linkM(1,:) = [0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]; %S?n?f?n sosyali
+linkM(2,:) = [0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0]; %Sosyalin kankas?
+linkM(3,:) = [0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0]; %Sosyalin 2.kankas?
+linkM(4,:) = [0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0]; %Sosyalin 3.kankas?
+linkM(5,:) = [0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1]; %Alakas?z
+linkM(6,:) = [0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 0 1 0];
+linkM(7,:) = [0 0 0 0 0 0 0 1 0 0 1 1 1 1 0 1 1 1 1 1 1 1 0 1 1];
+linkM(8,:) = [0 0 0 0 0 0 0 0 1 1 0 1 1 1 1 1 1 1 1 1 1 0 0 0 0];
+linkM(9,:) = [0 0 0 0 0 0 0 0 0 0 1 1 0 1 1 0 1 1 0 1 0 1 0 1 1];
+linkM(10,:)= [0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 1 1 0 1 1 0 1 0 0 0];
+linkM(11,:)= [0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 1 0 0 1 1 0 0 0 0 0];
+linkM(12,13)= 1;
+linkM(13,14)= 1;
+linkM(13,21)= 1;
+linkM(15,23)= 1;
+linkM(18,23)= 1;
+linkM(22,23)= 1;
 
 %Read Input Data
 %CHANGE "test.txt" if you're using different filename.
